@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2</title>
+</head>
+<body>
+    <h1>1-	¿Cuáles son las principales funciones de un kernel en la arquitectura </h1>
+    <p>Principales Funciones del Kernel
+        Gestión de Procesos:
+        
+        Planificación: Decide qué procesos se ejecutan y cuándo.
+        Creación y Terminación: Maneja la creación y eliminación de procesos.
+        Conmutación de Contexto: Cambia de un proceso a otro.
+        Gestión de Memoria:
+        
+        Asignación y Liberación: Asigna y libera memoria a los procesos.
+        Memoria Virtual: Utiliza paginación y segmentación.
+        Protección: Asegura que los procesos no interfieran entre sí.
+        Gestión de Archivos:
+        
+        Sistema de Archivos: Organiza y gestiona archivos en dispositivos de almacenamiento.
+        Acceso y Permisos: Controla el acceso y los permisos de los archivos.
+        Gestión de Dispositivos:
+        
+        Controladores: Proporciona una interfaz entre el sistema operativo y el hardware.
+        Operaciones de I/O: Gestiona la transferencia de datos entre la memoria y los dispositivos.
+        Gestión de Red:
+        
+        Protocolos de Comunicación: Implementa protocolos de red.
+        Transmisión de Datos: Controla la transmisión y recepción de datos en la red.
+        Seguridad y Protección:
+        
+        Control de Acceso: Define políticas de seguridad y control de acceso.
+        Autenticación y Autorización: Verifica identidades y permisos.
+        Interfaz de Sistema:
+        
+        Llamadas al Sistema: Permite a las aplicaciones solicitar servicios del kernel.
+        API del Kernel: Proporciona una API para interactuar con el sistema operativo.
+        Manejo de Interrupciones:
+        
+        Interrupciones de Hardware: Responde a señales de hardware.
+        Interrupciones de Software: Gestiona interrupciones generadas por software.
+        Interacción del Kernel con el Hardware
+        Controladores de Dispositivos: Actúan como intermediarios entre el sistema operativo y el hardware.
+        Interrupciones: El hardware envía señales que el kernel maneja para realizar tareas específicas.
+        Mapeo de Memoria: Gestiona la traducción de direcciones de memoria física a virtual.
+        DMA (Direct Memory Access): Permite a los dispositivos acceder directamente a la memoria para mejorar la eficiencia.</p>
+        <h2>2-	¿cómo se gestionan los procesos y cuál es la importancia de la multitarea en la eficiencia del sistema?</h2>
+        <p>Gestión de Procesos
+            La gestión de procesos es fundamental en un sistema operativo y se realiza a través de varias funciones clave:
+            
+            Creación y Terminación de Procesos:
+            
+            Creación: Cuando se inicia una aplicación, el kernel crea un nuevo proceso, asignándole un identificador único (PID) y recursos necesarios como memoria y tiempo de CPU.
+            Terminación: Cuando un proceso finaliza, el kernel libera todos los recursos asociados a ese proceso.
+            Planificación de Procesos:
+            
+            Planificador: El kernel decide qué proceso debe ejecutarse en cada momento mediante algoritmos de planificación como FIFO, Round Robin, o por prioridad.
+            Conmutación de Contexto: El kernel guarda el estado del proceso actual y carga el estado del siguiente proceso a ejecutarse.
+            Estados de los Procesos:
+            
+            Nuevo: El proceso está siendo creado.
+            Listo: El proceso está preparado para ejecutarse y espera su turno en la CPU.
+            En Ejecución: El proceso está siendo ejecutado por la CPU.
+            Bloqueado: El proceso está esperando un evento (como I/O).
+            Terminado: El proceso ha finalizado su ejecución.
+            Comunicación entre Procesos (IPC):
+            
+            Señales, Tubos, Sockets, Memoria Compartida: Mecanismos que permiten a los procesos comunicarse y sincronizarse.
+            Importancia de la Multitarea en la Eficiencia del Sistema
+            La multitarea, que permite la ejecución de múltiples procesos aparentemente de manera simultánea, es crucial para la eficiencia del sistema por las siguientes razones:
+            
+            Utilización Eficiente de la CPU:
+            
+            Asegura que la CPU siempre esté ocupada. Cuando un proceso está esperando, la CPU puede ejecutar otro proceso.
+            Mejora de la Respuesta del Sistema:
+            
+            Permite que los sistemas respondan rápidamente a las entradas del usuario, manteniendo múltiples tareas avanzando simultáneamente.
+            Mayor Productividad del Usuario:
+            
+            Los usuarios pueden realizar varias tareas a la vez, como editar documentos, navegar por la web y escuchar música, aumentando la productividad general.
+            Aprovechamiento de los Recursos del Sistema:
+            
+            Optimiza el uso de recursos como memoria y dispositivos de I/O, manteniendo múltiples procesos en ejecución.
+            Balance de Carga:
+            
+            Distribuye la carga de trabajo entre múltiples procesos, evitando cuellos de botella y mejorando la eficiencia global.</p>
+            <h3>3-	¿Qué medidas de seguridad se pueden implementar a nivel de sistema operativo para proteger una red, especialmente en entornos empresariales?</h3>
+            <p>1. Cortafuegos (Firewalls)
+                Configuración de Reglas: Establece reglas para permitir o bloquear el tráfico entrante y saliente basado en direcciones IP, puertos y protocolos.
+                Firewall de Aplicaciones: Protege contra ataques específicos a nivel de aplicación.
+                2. Control de Acceso
+                Autenticación Multifactor (MFA): Requiere múltiples formas de verificación antes de conceder acceso.
+                Permisos Basados en Roles (RBAC): Asigna permisos de acceso según el rol del usuario en la organización.
+                Control de Acceso Discrecional (DAC) y Control de Acceso Obligatorio (MAC): Define y aplica políticas de acceso a recursos específicos.
+                3. Cifrado
+                Cifrado de Datos en Reposo y en Tránsito: Protege la información almacenada y la transmitida a través de la red.
+                Uso de Protocolos Seguros: Implementa HTTPS, SSL/TLS para comunicaciones seguras.
+                4. Actualizaciones y Parches
+                Actualización Regular del Sistema Operativo: Aplica parches de seguridad y actualizaciones regularmente para corregir vulnerabilidades.
+                5. Monitorización y Auditoría
+                Registro de Actividades (Logging): Mantiene un registro detallado de las actividades del sistema y del usuario.
+                Monitorización de la Red: Utiliza herramientas para supervisar el tráfico de red y detectar actividades sospechosas.
+                6. Software Anti-Malware
+                Instalación de Antivirus y Anti-Spyware: Protege contra virus, spyware y otros tipos de malware.
+                Escaneos Regulares: Realiza escaneos periódicos para detectar y eliminar malware.
+                7. Segmentación de Red
+                División en Subredes: Segrega la red en subredes más pequeñas para limitar el alcance de posibles ataques.
+                Redes Privadas Virtuales (VPN): Crea conexiones seguras para el acceso remoto a la red.
+                8. Políticas de Seguridad
+                Políticas de Contraseñas Fuertes: Requiere el uso de contraseñas complejas y su cambio periódico.
+                Capacitación de los Empleados: Educa a los empleados sobre prácticas seguras y concienciación sobre la seguridad.
+                9. Sistemas de Detección y Prevención de Intrusos (IDS/IPS)
+                Detección de Intrusos: Monitorea y analiza el tráfico de red para detectar actividades sospechosas.
+                Prevención de Intrusos: Bloquea ataques potenciales antes de que puedan causar daño.
+                10. Backups y Recuperación ante Desastres
+                Copias de Seguridad Regulares: Realiza backups frecuentes de datos críticos.
+                Planes de Recuperación: Establece planes de recuperación ante desastres para asegurar la continuidad del negocio.</p>
+</body>
+</html>
